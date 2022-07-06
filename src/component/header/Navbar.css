@@ -1,0 +1,11 @@
+.navbar-section{ 
+    height: 150px;
+background-color: rgb(3, 3, 3, 0.9);
+
+}
+
+.logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
