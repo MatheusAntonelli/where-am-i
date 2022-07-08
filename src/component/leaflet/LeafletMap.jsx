@@ -1,3 +1,4 @@
+import { divIcon } from 'leaflet';
 import React, { useState } from 'react'
 import {MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent} from 'react-leaflet';
 import './LeafletMap.css'
@@ -26,18 +27,21 @@ function LocationMarker() {
 function LeafletMap() {
 
     return (
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <div className='position'>
+      <MapContainer center={[-24.8641, -54.3302]} zoom={13} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
+            <Marker position={[-24.8641, -54.3302]}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    I was made here. <br /> Enjoy it!.
                 </Popup>
             </Marker>
             <LocationMarker/>
         </MapContainer>
+      </div>
+
     )
 }
 
