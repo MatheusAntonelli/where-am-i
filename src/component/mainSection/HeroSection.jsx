@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './HeroSection.css'
 import {useTranslation} from 'react-i18next';
+import { FlagButton } from '../button/FlagButton';
 
 
 //Value and the text for the language options
@@ -27,18 +28,16 @@ function HeroSection() {
        window.location.replace(loc + "?lng=" + e.target.value);
    }
   return (
-    <div>
+    <div className='buttons'>
+        <FlagButton className='btn' flagButtonStyle='btn-pt' value={'pt'} onClick={handleChange}/>
+        <FlagButton className='btn' flagButtonStyle='btn-us' value={'en'} onClick={handleChange}/>
+        <FlagButton className='btn' flagButtonStyle='btn-cn' value={'zh'} onClick={handleChange}/>
+        <FlagButton className='btn' flagButtonStyle='btn-es' value={'es'} onClick={handleChange}/>
+        <FlagButton className='btn' flagButtonStyle='btn-in' value={'hi'} onClick={handleChange}/>
+
         <h1 className='hero-title'>{t('welcome')}</h1>
         <p className='hero-text'><h3> {t('how')}</h3><br /> {t('useCase')}</p>
 
-        <select value={lang} onChange={handleChange}>
-          {languages.map(item => {
-            return (
-              <option key={item.value}
-              value={item.value}>{item.text}</option>
-            )
-          })}
-        </select>
 
     </div>
   )
