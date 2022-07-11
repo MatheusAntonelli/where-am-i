@@ -20,13 +20,14 @@ function HeroSection() {
    }
   return (
     <div className='hero-section'>
-      <div className='btn-flags-hero'>
+      <div className='btn-flags-hero' value={lang}>
         <FlagButton className='btn' flagButtonStyle='btn-pt' value={'pt'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-us' value={'en'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-cn' value={'zh'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-es' value={'es'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-in' value={'hi'} onClick={handleChange}/>
       </div>
+      
       <h1 className='hero-title'>{t('welcome')}</h1>
       <p className='hero-text'><h3> {t('how')}</h3><br /> {t('useCase')}</p>
 

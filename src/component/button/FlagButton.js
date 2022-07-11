@@ -18,6 +18,7 @@ export const FlagButton = ({
         type = {type}
         value={value}
         >
+    
         </button>
     )
 }
