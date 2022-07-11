@@ -1,0 +1,28 @@
+.btn {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 0 none;
+    margin: 10px;
+}
+
+.btn-pt {
+    background-image: url('/public/img/flags/br.svg');
+}
+
+.btn-es {
+    background-image: url('/public/img/flags/es.svg');
+}
+
+.btn-us {
+    background-image: url('/public/img/flags/us.svg');
+}
+
+.btn-cn {
+    background-image: url('/public/img/flags/cn.svg');
+}
+
+.btn-in {
+    background-image: url('/public/img/flags/in.svg');
+}
