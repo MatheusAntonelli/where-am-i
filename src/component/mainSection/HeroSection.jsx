@@ -15,7 +15,7 @@ function HeroSection() {
    // change the language
    const handleChange = e => { 
        setLang(e.target.value);
-       let loc = "http://localhost:3000/";
+       let loc = "https://cerulean-crostata-b537f9.netlify.app";
        window.location.replace(loc + "?lng=" + e.target.value);
    }
   return (
