@@ -4,15 +4,6 @@ import {useTranslation} from 'react-i18next';
 import { FlagButton } from '../button/FlagButton';
 
 
-//Value and the text for the language options
-const languages = [
-  { value: '', text: "Options" },
-  { value: 'en', text: "English" },
-  { value: 'pt', text: "Portguese" },
-  { value: 'es', text: "Spanish" },
-  {value:'zh', text:"Chinese"}
-]
-
 function HeroSection() {
 
    // It is a hook imported from 'react-i18next'
@@ -28,15 +19,16 @@ function HeroSection() {
        window.location.replace(loc + "?lng=" + e.target.value);
    }
   return (
-    <div className='buttons'>
+    <div className='hero-section'>
+      <div className='btn-flags-hero'>
         <FlagButton className='btn' flagButtonStyle='btn-pt' value={'pt'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-us' value={'en'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-cn' value={'zh'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-es' value={'es'} onClick={handleChange}/>
         <FlagButton className='btn' flagButtonStyle='btn-in' value={'hi'} onClick={handleChange}/>
-
-        <h1 className='hero-title'>{t('welcome')}</h1>
-        <p className='hero-text'><h3> {t('how')}</h3><br /> {t('useCase')}</p>
+      </div>
+      <h1 className='hero-title'>{t('welcome')}</h1>
+      <p className='hero-text'><h3> {t('how')}</h3><br /> {t('useCase')}</p>
 
 
     </div>
