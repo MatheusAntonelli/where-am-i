@@ -15,8 +15,8 @@ function HeroSection() {
    // change the language
    const handleChange = e => { 
        setLang(e.target.value);
-       let loc = "where-am-i-now.netlify.app";
-       window.location.replace("?lng=" + e.target.value);
+       let loc = "https://where-am-i-now.netlify.app";
+       window.location.replace(loc + "?lng=" + e.target.value);
    }
   return (
     <div className='hero-section'>
